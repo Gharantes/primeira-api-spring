@@ -1,38 +1,24 @@
 package com.guilherme.mineracao_dados.models;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class TurmaDto {
-    private final Long id;
-    private String name;
-    private String disciplina;
-    private ArrayList<AlunoDto> alunos = new ArrayList<>();
+    private Integer id;
+    private String nome;
+    private DisciplinaDto disciplina;
+    private List<AlunoDto> alunos;
 
-    public TurmaDto(Long id, String name, String disciplina) {
-        this.id = id;
-        this.name = name;
-        this.disciplina = disciplina;
-    }
-
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
-    public ArrayList<AlunoDto> getAlunos() {
-        return alunos;
+    public String getNome() {
+        return nome;
     }
-    public void addAluno(String name) {
-        alunos.add(new AlunoDto(name));
-    }
-    public String getName() {
-        return name;
-    }
-    public void setName(String param) {
-        this.name = param;
-    }
-    public String getDisciplina() {
-        return disciplina;
-    }
-    public void setDisciplina(String param) {
-        this.disciplina = param;
-    }
+    public DisciplinaDto getDisciplina() { return disciplina; }
+    public List<AlunoDto> getAlunos() { return alunos; }
+
+    public void setId(Integer id) { this.id = id; }
+    public void setNome(String nome) { this.nome = nome; }
+    public void setDisciplina(DisciplinaDto disciplina) { this.disciplina = disciplina; }
+    public void setAlunos(List<AlunoDto> alunos) { this.alunos = alunos; }
 }

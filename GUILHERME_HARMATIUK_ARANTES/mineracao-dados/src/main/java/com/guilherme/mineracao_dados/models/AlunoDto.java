@@ -1,12 +1,11 @@
 package com.guilherme.mineracao_dados.models;
 
 public class AlunoDto {
-    private String name;
-    AlunoDto(String name) {
-        this.name = name;
-    }
-    public String getName() {
-        return name;
-    }
+    private Integer id;
+    private String nome;
 
+    public Integer getId() { return id; }
+    public String getNome() { return nome; }
+    public void setId(Integer id) { this.id = id; }
+    public void setNome(String nome) { this.nome = nome; }
 }
